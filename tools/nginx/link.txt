@@ -1,0 +1,11 @@
+
+#nginx 源码学习
+http://blog.csdn.net/kenbinzhang/article/details/4663258
+
+#nginx echo 模块
+http://kb.cnblogs.com/page/98352/
+
+http://www.evanmiller.org/nginx-modules-guide.html
+
+#taobao nginx
+http://tengine.taobao.org/book/chapter_02.html#id6

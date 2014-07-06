@@ -1,0 +1,38 @@
+上海6000
+深圳6000
+12000
+
+times
+4*60*20
+
+stock
+realtime
+price 8
+high 8
+low 8
+buy5  price volume 5*16
+sale5  price volume 5*16
+totalVolume  8
+totalAmount 8
+time 8
+
+8*6+2*5*16=200byte
+500*4*60*20*12000/1024/1024=27465mb
+
+
+(8+8+1+8)*5=125
+tick
+time price direction num
+
+500byte
+
+500byte*4*60*20*12000=
+
+timeseries
+1 5 10 20 30 60
+241 40 24 
+30*240=
+kline
+1 5 10 20 30 60
+240 40 24 
+300*30=

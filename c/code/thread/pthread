@@ -1,0 +1,13 @@
+pthread.h
+libpthread.a
+
+extern int pthread_create __P ((pthread_t  *__thread, __const pthread_attr_t *__attr,void *(*__start_routine) (void *),  void *__arg));
+第一个参数为指向线程标识符的指针，第二个参数用来设置线程属性，第三个参数是线程运行函数的起始地址，最后一个参数是运行函数的参数。这里，我们的函数thread不需要参数，所以最后一个参数设为空指针。第二个参数我们也设为空指针，这样将生成默认属性的线程。
+
+extern int pthread_join __P ((pthread_t __th, void **__thread_return));
+第一个参数为被等待的线程标识符，第二个参数为一个用户定义的指针，它可以用来存储被等待线程的返回值。
+
+extern void pthread_exit __P ((void *__retval)) __attribute__ ((__noreturn__));
+唯一的参数是函数的返回代码，只要pthread_join中的第二个参数thread_return不是NULL，这个值将被传递给thread_return。最后要说明的是，一个线程不能被多个线程等待，否则第一个接收到信号的线程成功返回，其余调用pthread_join的线程则返回错误代码ESRCH。
+
+最常用的三个函数pthread_create，pthread_join和pthread_exit
